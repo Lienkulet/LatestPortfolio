@@ -37,7 +37,7 @@ const Project = ({
                     >{description}</p>
                     <div className='flex flex-wrap gap-2 items-center justify-center mt-2'>
                         {technologies.length > 0 && technologies.map((technology, index) => (
-                            <h1 key={technology.id} className='p-2 bg-white shadow font-semibold text-md'
+                            <h1 key={index} className='p-2 bg-white shadow font-semibold text-md'
                             data-aos='zoom-in' data-aos-delay={delay+index*100}
                             >{technology}</h1>
                         ))}

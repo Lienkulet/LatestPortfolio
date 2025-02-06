@@ -25,8 +25,8 @@ const Projects = () => {
       delay:300,
       image: '/SDGroup.png',
       github: 'https://github.com/Lienkulet/SDGroup',
-      liveDemo: 'https://kedco-electronics.vercel.app/',
-      description: `Transform your spaces with SDGroup. Specializing in apartment and office repairs, we deliver top-notch services to meet your unique needs. From minor fixes to major renovations, our skilled team ensures a seamless and stress-free experience. Trust SDGroup to enhance the functionality and aesthetics of your property, creating a space you'll love.`,
+      liveDemo: 'https://sdgroup.md/',
+      description: `Transform your spaces with SDGroup. Website for a company specialized in apartment and office repairs, we deliver top-notch services to meet your unique needs. From minor fixes to major renovations, our skilled team ensures a seamless and stress-free experience. Trust SDGroup to enhance the functionality and aesthetics of your property, creating a space you'll love.`,
       technologies: ['Html', 'Css', 'Javascript']
     },
     {
@@ -43,9 +43,19 @@ const Projects = () => {
       delay:300,
       image: '/ComoaraStupului.png',
       github: 'https://github.com/Lienkulet/ComoaraStupului',
-      liveDemo: 'https://kedco-electronics.vercel.app/',
-      description: `Explore the sweet essence of nature with 'Comoara Stupului', where our extensive selection of honey products meets every palate's needs. Our streamlined e-commerce platform guarantees a hassle-free shopping journey, inviting you to indulge in the purity of honey, anytime, anywhere.`,
+      liveDemo: 'https://comoarastupului.com/',
+      description: `Explore the sweet essence of nature with 'Comoara Stupului', where our extensive selection of honey products meets every palate's needs. Our streamlined e-commerce platform guarantees a hassle-free shopping journey, inviting you to indulge in the purity of honey, anytime, anywhere. Website created for the Tekwill 2024 competition and exhibition
+      and included in their book`,
       technologies: ['Html', 'Css', 'Javascript']
+    },
+    {
+      title: 'SummAize',
+      delay:300,
+      image: '/SummAize.jpeg',
+      github: 'https://github.com/Lienkulet/SummAIze',
+      liveDemo: 'https://summaizegpt.netlify.app/',
+      description: `Explore the sweet essence of nature with 'Comoara Stupului', where our extensive selection of honey products meets every palate's needs. Our streamlined e-commerce platform guarantees a hassle-free shopping journey, inviting you to indulge in the purity of honey, anytime, anywhere.`,
+      technologies: ['NextJS', 'Tailwind CSS']
     },
     {
       title: 'DeliverXpress🚗',

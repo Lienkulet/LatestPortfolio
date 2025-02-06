@@ -17,7 +17,7 @@ const Skill = ({skill: {name, delay, technologies}}) => {
         </header>
         <main className='flex flex-col items-center py-3  gap-2 '>
         {technologies?.length > 0 && technologies?.map((technology, index) => (
-          <h1 key={technology.id} className='text-[#555] text-md font-normal' data-aos='zoom-in' data-aos-delay={delay+index*100}>{technology}</h1>
+          <h1 key={index} className='text-[#555] text-md font-normal' data-aos='zoom-in' data-aos-delay={delay+index*100}>{technology}</h1>
           ))}
         </main>
     </article>
