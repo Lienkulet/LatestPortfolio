@@ -44,14 +44,15 @@ const Project = ({
                     </div>
                 </main>
                 <footer className='flex flex-row items-baseline relative bottom-0 mt-4 md:mt-auto mb-2 gap-10 font-medium'>
-                    <Link href={github} target='_blank'
+                   {github != ''? <Link href={github} target='_blank'
                          className="flex flex-row items-center gap-2 hover:scale-y-110 hover:text-[#147efb] 
                             ease-in-out duration-500"
                             data-aos='zoom-in' data-aos-delay={delay+400}
                             >
                             Code
                             <AiFillGithub size={'1.5rem'}/>
-                    </Link>
+                    </Link> : ''}
+                    
                     <Link href={liveDemo} target='_blank'
                          className="flex flex-row items-center gap-2 hover:scale-y-110 hover:text-[#147efb]
                             ease-in-out duration-500"

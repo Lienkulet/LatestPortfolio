@@ -11,7 +11,7 @@ const Skills = () => {
         {
             name: "Front-end",
             delay: 200,
-            technologies: [ "NextJs" , "React", "Javascript", "Angular", "HTML" ]
+            technologies: [ "NextJs" , "React", "Javascript", "HTML" ]
         },
         {
             name: "Styling",

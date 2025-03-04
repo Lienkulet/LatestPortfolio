@@ -21,12 +21,30 @@ const Projects = () => {
       technologies: ['React', 'NextJs', 'Sanity']
     },
     {
+      title: 'Premier Imobil',
+      delay:300,
+      image: '/PremierImobil.png',
+      github: '',
+      liveDemo: 'https://premierimobil.md/ro',
+      description: 'The perfect platform for expressing your thoughts and ideas online through insightful articles, personal anecdotes, and engaging discussions.',
+      technologies: ['React', 'NextJs', 'Tailwind Css', 'MongoDb']
+    },
+    {
+      title: 'Comoara Stupului',
+      delay:300,
+      image: '/ComoaraStupului.png',
+      github: 'https://github.com/Lienkulet/ComoaraStupului',
+      liveDemo: 'https://comoarastupului.com/',
+      description: `Streamlined e-commerce platform inviting you to indulge in the purity of honey, anytime, anywhere. Website created for the Tekwill 2024 competition and exhibition and included in their book`,
+      technologies: ['Html', 'Css', 'Javascript']
+    },
+    {
       title: 'SDGroup🧱',
       delay:300,
       image: '/SDGroup.png',
-      github: 'https://github.com/Lienkulet/SDGroup',
+      github: '',//'https://github.com/Lienkulet/SDGroup',
       liveDemo: 'https://sdgroup.md/',
-      description: `Transform your spaces with SDGroup. Website for a company specialized in apartment and office repairs, we deliver top-notch services to meet your unique needs. From minor fixes to major renovations, our skilled team ensures a seamless and stress-free experience. Trust SDGroup to enhance the functionality and aesthetics of your property, creating a space you'll love.`,
+      description: `Website for a local company specialized in apartment and office repairs, top-notch services to meet unique needs. From minor fixes to major renovations. Trust SDGroup to enhance the functionality and aesthetics of your property, creating a space you'll love.`,
       technologies: ['Html', 'Css', 'Javascript']
     },
     {
@@ -37,16 +55,6 @@ const Projects = () => {
       liveDemo: 'https://liedko.vercel.app/',
       description: 'Experience hassle-free electronic device shopping. Discover a wide range of products, utilize search and filtering options, read reviews, and enjoy a seamless checkout process. Manage orders, create a wishlist, and take advantage of coupons for added savings.',
       technologies: ['React', 'NextJs', 'Styled Components', 'MongoDb']
-    },
-    {
-      title: 'Comoara Stupului',
-      delay:300,
-      image: '/ComoaraStupului.png',
-      github: 'https://github.com/Lienkulet/ComoaraStupului',
-      liveDemo: 'https://comoarastupului.com/',
-      description: `Explore the sweet essence of nature with 'Comoara Stupului', where our extensive selection of honey products meets every palate's needs. Our streamlined e-commerce platform guarantees a hassle-free shopping journey, inviting you to indulge in the purity of honey, anytime, anywhere. Website created for the Tekwill 2024 competition and exhibition
-      and included in their book`,
-      technologies: ['Html', 'Css', 'Javascript']
     },
     {
       title: 'SummAize',
@@ -65,15 +73,6 @@ const Projects = () => {
       liveDemo: 'https://deliver-xpress.vercel.app/',
       description: 'Discover a new level of convenience and freedom from compact cars to spacious SUVs, our diverse fleet caters to your unique needs, while our seamless booking process ensures a stress-free experience. Get ready to hit the road and create unforgettable memories.',
       technologies: ['React', 'Typescript', 'Tailwind Css', `RapidApi's`]
-    },
-    {
-      title: 'Expressive Mind🌐',
-      delay:300,
-      image: '/Expressive-Mind.webp',
-      github: 'https://github.com/Lienkulet/Expressive-Mind',
-      liveDemo: 'https://expressive-mind.vercel.app/',
-      description: 'The perfect platform for expressing your thoughts and ideas online through insightful articles, personal anecdotes, and engaging discussions.',
-      technologies: ['React', 'NextJs', 'Tailwind Css', 'MongoDb']
     },
   ]
   return (
