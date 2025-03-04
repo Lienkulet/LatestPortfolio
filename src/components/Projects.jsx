@@ -21,16 +21,16 @@ const Projects = () => {
       technologies: ['React', 'NextJs', 'Sanity']
     },
     {
-      title: 'Premier Imobil',
+      title: 'Premier Imobil🏡',
       delay:300,
       image: '/PremierImobil.png',
       github: '',
       liveDemo: 'https://premierimobil.md/ro',
-      description: 'The perfect platform for expressing your thoughts and ideas online through insightful articles, personal anecdotes, and engaging discussions.',
+      description: 'Website for a local real estate agency, offering expert services in buying, selling, and renting properties.',
       technologies: ['React', 'NextJs', 'Tailwind Css', 'MongoDb']
     },
     {
-      title: 'Comoara Stupului',
+      title: 'Comoara Stupului🍯',
       delay:300,
       image: '/ComoaraStupului.png',
       github: 'https://github.com/Lienkulet/ComoaraStupului',
@@ -42,13 +42,13 @@ const Projects = () => {
       title: 'SDGroup🧱',
       delay:300,
       image: '/SDGroup.png',
-      github: '',//'https://github.com/Lienkulet/SDGroup',
+      github: '',
       liveDemo: 'https://sdgroup.md/',
-      description: `Website for a local company specialized in apartment and office repairs, top-notch services to meet unique needs. From minor fixes to major renovations. Trust SDGroup to enhance the functionality and aesthetics of your property, creating a space you'll love.`,
+      description: `Website for a local company specialized in apartment and office repairs, top-notch services to meet unique needs. From minor fixes to major renovations.`,
       technologies: ['Html', 'Css', 'Javascript']
     },
     {
-      title: 'Liedko',
+      title: 'Liedko📱',
       delay:300,
       image: '/Liedko.webp',
       github: 'https://github.com/Lienkulet/Liedko',
@@ -57,23 +57,24 @@ const Projects = () => {
       technologies: ['React', 'NextJs', 'Styled Components', 'MongoDb']
     },
     {
-      title: 'SummAize',
+      title: 'Grilli Bites🍝',
+      delay:300,
+      image: '/Grilli2.png',
+      github: 'https://github.com/Lienkulet/Grilli',
+      liveDemo: 'https://grillweb.netlify.app/',
+      description: 'Restaurant landing page, serving delicious, freshly prepared meals in a cozy atmosphere. Enjoy a unique dining experience with dishes crafted to satisfy every taste.',
+      technologies: ['React', 'NextJs', 'Tailwind Css']
+    },
+    {
+      title: 'SummAize📝',
       delay:300,
       image: '/SummAize.jpeg',
       github: 'https://github.com/Lienkulet/SummAIze',
       liveDemo: 'https://summaizegpt.netlify.app/',
-      description: `Explore the sweet essence of nature with 'Comoara Stupului', where our extensive selection of honey products meets every palate's needs. Our streamlined e-commerce platform guarantees a hassle-free shopping journey, inviting you to indulge in the purity of honey, anytime, anywhere.`,
+      description: 'Article summarizer, offering fast and accurate summaries of newspages and much more! Save time and get to the key points with ease, all in just a few clicks.',
       technologies: ['NextJS', 'Tailwind CSS']
     },
-    {
-      title: 'DeliverXpress🚗',
-      delay:300,
-      image: '/DeliverXpress.webp',
-      github: 'https://github.com/Lienkulet/DeliverXpress',
-      liveDemo: 'https://deliver-xpress.vercel.app/',
-      description: 'Discover a new level of convenience and freedom from compact cars to spacious SUVs, our diverse fleet caters to your unique needs, while our seamless booking process ensures a stress-free experience. Get ready to hit the road and create unforgettable memories.',
-      technologies: ['React', 'Typescript', 'Tailwind Css', `RapidApi's`]
-    },
+   
   ]
   return (
     <section id='projects' className='bg-white py-20'>
