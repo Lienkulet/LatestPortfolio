@@ -31,17 +31,17 @@ const Hero = () => {
                         <div className='flex flex-col gap-5 mt-5'>
                             <div className='flex flex-row items-center max-w-[450px]'>
                                 <h1 className='font-extrabold text-5xl text-[#2d2e32]'>Web Developer</h1>
-                                <Image src="/hand.png" alt="hand" height={60} width={60} className='m-0 p-0' />
+                                <Image src="/hand.png" alt="waving hand" height={60} width={60} className='m-0 p-0' />
                             </div>
-                            <h3 className='max-w-[500px] font-medium text-lg text-[#555] font-mulish'>{`Hi, I'm Clocicov Alexandru, A passionate Web Developer from Chisinau, Moldova📌`}</h3>
+                            <p className='max-w-[500px] font-medium text-lg text-[#555] font-mulish'>{`Hi, I'm Clocicov Alexandru, A passionate Web Developer from Chisinau, Moldova📌`}</p>
                         </div>
                         <div className='flex flex-col gap-4'>
                             <div className="flex flex-wrap gap-4">
-                                <Link href={'https://www.linkedin.com/in/alexandru-clocicov/'} target='_blank'
+                                <Link href={'https://www.linkedin.com/in/alexandru-clocicov/'} target='_blank' rel='noopener noreferrer'
                                     className="hover:scale-y-110 text-[#555] hover:text-[#147efb] ease-in-out duration-500">
                                     <AiFillLinkedin size={'2rem'} />
                                 </Link>
-                                <Link href={'https://github.com/Lienkulet'} target='_blank'
+                                <Link href={'https://github.com/Lienkulet'} target='_blank' rel='noopener noreferrer'
                                     className="hover:scale-y-110 text-[#555] hover:text-[#147efb] ease-in-out duration-500">
                                     <AiFillGithub size={'2rem'} />
                                 </Link>
@@ -56,9 +56,10 @@ const Hero = () => {
                     <div ref={rightRef} className='rounded-full opacity-0'>
                         <Image
                             src={'/mee3.jpg'}
-                            alt='Me'
+                            alt='Alexandru Clocicov'
                             height={300}
                             width={300}
+                            priority
                             className='rounded-full border-4 w-[350px] h-[350px] border-black mt-44 md:mt-0 bg-cover'
                         />
                     </div>

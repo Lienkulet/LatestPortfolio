@@ -38,14 +38,14 @@ const About = () => {
                     <Image
                         ref={imageRef}
                         src='/me2.jpg'
-                        alt='me2'
+                        alt='Alexandru Clocicov'
                         height={150}
                         width={310}
                         className='rounded-xl w-[410px] h-[350px] bg-cover opacity-0'
                     />
                     <div ref={textRef} className='flex flex-col gap-3 max-w-lg'>
-                        <h5 className='font-bold text-md text-[#147efb] opacity-0'>ABOUT ME</h5>
-                        <h1 className='font-extrabold text-lg text-[#2d2e32] opacity-0'>A dedicated Web Developer</h1>
+                        <h2 className='font-bold text-md text-[#147efb] opacity-0'>ABOUT ME</h2>
+                        <h3 className='font-extrabold text-lg text-[#2d2e32] opacity-0'>A dedicated Web Developer</h3>
                         <p className='text-[#555] text-md opacity-0'>
                             I am Alex, a dedicated fitness enthusiast and proficient frontend developer. With a workout journey
                             spanning over two years, I have cultivated a meticulous attention to detail. In my free time,

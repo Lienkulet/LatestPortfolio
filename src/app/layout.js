@@ -7,8 +7,22 @@ import { Toaster } from "react-hot-toast";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Alexandru Clocicov",
-  description: "Web Developer Alexandru Clocicov",
+  title: "Alexandru Clocicov — Web Developer",
+  description: "Portfolio of Alexandru Clocicov, a passionate Full-Stack Web Developer from Chisinau, Moldova. Specializing in React, Next.js, and modern web technologies.",
+  openGraph: {
+    title: "Alexandru Clocicov — Web Developer",
+    description: "Passionate Full-Stack Web Developer from Chisinau, Moldova. Specializing in React, Next.js, and modern web technologies.",
+    url: "https://alexclocicov.vercel.app",
+    siteName: "Alexandru Clocicov Portfolio",
+    images: [{ url: "/mee3.jpg", width: 300, height: 300, alt: "Alexandru Clocicov" }],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Alexandru Clocicov — Web Developer",
+    description: "Passionate Full-Stack Web Developer from Chisinau, Moldova.",
+    images: ["/mee3.jpg"],
+  },
 };
 
 export default function RootLayout({ children }) {

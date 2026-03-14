@@ -42,7 +42,7 @@ const Skills = () => {
         <section ref={sectionRef} id='skills' className='bg-[#F9F9F9] py-20'>
             <div className='container'>
                 <header className='mb-10 md:text-start text-center'>
-                    <h1 ref={headerRef} className='text-[#147efb] font-bold text-xl opacity-0'>My Skills</h1>
+                    <h2 ref={headerRef} className='text-[#147efb] font-bold text-xl opacity-0'>My Skills</h2>
                 </header>
                 <div ref={cardsRef} className='flex md:flex-row flex-col items-center justify-between gap-2'>
                     {skills.map((skill, index) => (

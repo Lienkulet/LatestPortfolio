@@ -14,6 +14,7 @@ const Contact = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
+    const [loading, setLoading] = useState(false);
     const sectionRef = useRef(null)
     const formRef = useRef(null)
     const linksRef = useRef(null)
@@ -41,31 +42,27 @@ const Contact = () => {
         return () => ctx.revert()
     }, []);
 
-    const sendEmail = (e) => {
+    const sendEmail = async (e) => {
         e.preventDefault();
-        let values = {
-            name: name,
-            email: email,
-            message: message
+        if (!regexEmail.test(email) || !regexName.test(name)) {
+            toast.error('Please enter valid values');
+            return;
         }
+        const values = { name, email, message };
+        setLoading(true);
         try {
-            if (regexEmail.test(email) && regexName.test(name)) {
-                setName('');
-                setEmail('');
-                setMessage('');
-
-                toast.promise(sendContactForm(values), {
-                    success: 'Email sent successfuly!',
-                    loading: 'Sending, dont close the website!',
-                    error: 'Error while sending email'
-                });
-            }
-        } catch (error) {
-            toast.error('Please enter the right values');
-            console.log(error)
+            await toast.promise(sendContactForm(values), {
+                success: 'Email sent successfully!',
+                loading: 'Sending, don\'t close the website!',
+                error: 'Error while sending email'
+            });
             setName('');
             setEmail('');
             setMessage('');
+        } catch (error) {
+            toast.error('Please enter the right values');
+        } finally {
+            setLoading(false);
         }
     }
 
@@ -75,66 +72,66 @@ const Contact = () => {
                 <main className='flex flex-col md:flex-row items-center'>
                     <form ref={formRef} className='flex flex-col shadow-md p-3 bg-white
                                  w-full md:w-fit rounded-xl gap-5 opacity-0'
-                        onSubmit={(e) => sendEmail(e)}
+                        onSubmit={sendEmail}
                     >
                         <label className='px-2 pt-2'>
-                            <h1 className='text-2xl w-full text-[#147efb] font-bold'>Get in touch 👇</h1>
+                            <h2 className='text-2xl w-full text-[#147efb] font-bold'>Get in touch 👇</h2>
                         </label>
                         <label className='flex flex-col py-2 relative'>
-                            <input type="text" required className='bg-[#F9F9F9] p-3 focus:border
-                                                               focus:border-[#147efb]  focus:outline-[#147efb] shadow
-                                                                 rounded-xl md:w-[300px] w-full'
-                                onChange={e => setName(e.target.value)} />
-                            <h1 className={
-                                name != '' ? 'absolute top-[-10%] bg-white w-fit text-[#147efb] left-3 right-0 text-lg' : 'absolute top-5 left-3 right-0 text-lg w-full'
-                            }>
+                            <input
+                                type="text"
+                                required
+                                value={name}
+                                className='bg-[#F9F9F9] p-3 focus:border focus:border-[#147efb] focus:outline-[#147efb] shadow rounded-xl md:w-[300px] w-full'
+                                onChange={e => setName(e.target.value)}
+                            />
+                            <span className={name !== '' ? 'absolute top-[-10%] bg-white w-fit text-[#147efb] left-3 right-0 text-lg' : 'absolute top-5 left-3 right-0 text-lg w-full'}>
                                 Name
-                            </h1>
+                            </span>
                         </label>
                         <label className='flex flex-col py-2 relative'>
-                            <input type="email" required
-                                className='bg-[#F9F9F9] p-3 focus:border
-                                             focus:border-[#147efb]  focus:outline-[#147efb] shadow
-                                             rounded-xl md:w-[300px] w-full'
-                                onChange={e => setEmail(e.target.value)} />
-                            <h1 className={
-                                email != '' ? 'absolute top-[-10%] bg-white w-fit text-[#147efb] left-3 right-0 text-lg' : 'absolute top-5 left-3 right-0 text-lg w-full'
-                            }>
+                            <input
+                                type="email"
+                                required
+                                value={email}
+                                className='bg-[#F9F9F9] p-3 focus:border focus:border-[#147efb] focus:outline-[#147efb] shadow rounded-xl md:w-[300px] w-full'
+                                onChange={e => setEmail(e.target.value)}
+                            />
+                            <span className={email !== '' ? 'absolute top-[-10%] bg-white w-fit text-[#147efb] left-3 right-0 text-lg' : 'absolute top-5 left-3 right-0 text-lg w-full'}>
                                 Email
-                            </h1>
+                            </span>
                         </label>
                         <label className='flex flex-col py-2 relative'>
-                            <textarea type="text" required
+                            <textarea
+                                required
                                 rows={5}
-                                className={
-                                    `${message != '' ? 'bg-white ' : 'bg-[#F9F9F9] '
-                                    } p-3 focus:border
-                                  focus:border-[#147efb]  focus:outline-[#147efb] shadow
-                                  rounded-xl md:w-[300px] w-full max-h-[300px] min-h-[100px]`
-                                }
-                                onChange={e => setMessage(e.target.value)} />
-                            <h1 className={
-                                message != '' ? 'absolute top-[-5%] bg-white w-fit text-[#147efb] left-3 right-0 text-lg' : 'absolute top-5 left-3 right-0 text-lg w-full'
-                            }>
+                                value={message}
+                                className={`${message !== '' ? 'bg-white' : 'bg-[#F9F9F9]'} p-3 focus:border focus:border-[#147efb] focus:outline-[#147efb] shadow rounded-xl md:w-[300px] w-full max-h-[300px] min-h-[100px]`}
+                                onChange={e => setMessage(e.target.value)}
+                            />
+                            <span className={message !== '' ? 'absolute top-[-5%] bg-white w-fit text-[#147efb] left-3 right-0 text-lg' : 'absolute top-5 left-3 right-0 text-lg w-full'}>
                                 Message
-                            </h1>
+                            </span>
                         </label>
-                        <button className='text-[#147efb] border border-[#147efb] rounded-xl
-                                           py-2 flex flex-row items-center justify-center w-full
-                                          hover:bg-[#147efb] hover:text-white ease-in-out duration-700'>
-                            Send
+                        <button
+                            type='submit'
+                            disabled={loading}
+                            className='text-[#147efb] border border-[#147efb] rounded-xl py-2 flex flex-row items-center justify-center w-full
+                                hover:bg-[#147efb] hover:text-white ease-in-out duration-700
+                                disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-transparent disabled:hover:text-[#147efb]'>
+                            {loading ? 'Sending...' : 'Send'}
                             <TbSend />
                         </button>
                     </form>
                     <div ref={linksRef} className='flex flex-col mx-auto gap-6 opacity-0'>
                         <div>
                             <header className='flex items-center justify-center text-center md:mt-4 mt-10 mb-4'>
-                                <h1 className='text-[#147efb] font-bold text-2xl'>{`Let's Connect🌐`}</h1>
+                                <h2 className='text-[#147efb] font-bold text-2xl'>{`Let's Connect🌐`}</h2>
                             </header>
                             <Link href={'mailto:clocicovalexandru@gmail.com'}
                                 target='_blank'
-                                className='flex flex-row items-center gap-3 bg-white p-4 rounded-xl  shadow-md border
-                                            hover:border-[#147efb] ease-linear duration-700'>
+                                rel='noopener noreferrer'
+                                className='flex flex-row items-center gap-3 bg-white p-4 rounded-xl shadow-md border hover:border-[#147efb] ease-linear duration-700'>
                                 <div className='p-4 rounded-full bg-white text-[#147efb] border shadow-md'>
                                     <AiOutlineMail size={'2rem'} />
                                 </div>
@@ -146,8 +143,8 @@ const Contact = () => {
                         </div>
                         <Link href={'https://www.linkedin.com/in/alexandru-clocicov/'}
                             target='_blank'
-                            className="flex flex-row items-center gap-3 bg-white p-4 rounded-xl  shadow-md border
-                                        hover:border-[#147efb] ease-linear duration-700">
+                            rel='noopener noreferrer'
+                            className="flex flex-row items-center gap-3 bg-white p-4 rounded-xl shadow-md border hover:border-[#147efb] ease-linear duration-700">
                             <div className='p-4 rounded-full bg-white text-[#147efb] border shadow-md'>
                                 <AiFillLinkedin size={'2rem'} />
                             </div>
@@ -158,8 +155,8 @@ const Contact = () => {
                         </Link>
                         <Link href={'https://github.com/Lienkulet'}
                             target='_blank'
-                            className="flex flex-row items-center gap-3 bg-white p-4 rounded-xl  shadow-md border
-                                         hover:border-[#147efb] ease-linear duration-700">
+                            rel='noopener noreferrer'
+                            className="flex flex-row items-center gap-3 bg-white p-4 rounded-xl shadow-md border hover:border-[#147efb] ease-linear duration-700">
                             <div className='p-4 rounded-full bg-white text-[#147efb] border shadow-md'>
                                 <AiFillGithub size={'2rem'} />
                             </div>
@@ -176,4 +173,3 @@ const Contact = () => {
 }
 
 export default Contact
-

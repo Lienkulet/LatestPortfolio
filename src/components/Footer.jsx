@@ -7,15 +7,17 @@ const Footer = () => {
     <section className="bg-[#2D2E32] w-full py-5 text-white">
       <div className="container">
         <div className="flex flex-row justify-between items-center">
-          <h1 className="font-bold">Copyright © 2024. All rights are reserved</h1>
+          <p className="font-bold">Copyright © {new Date().getFullYear()}. All rights are reserved</p>
           <div className="flex flex-wrap gap-4">
             <Link href={'https://www.linkedin.com/in/alexandru-clocicov/'}
                 target='_blank'
+                rel='noopener noreferrer'
                 className="hover:scale-y-110 ease-in-out duration-700">
               <AiFillLinkedin size={'2rem'} />
             </Link>
-            <Link href={'https://github.com/Lienkulet'} 
+            <Link href={'https://github.com/Lienkulet'}
                 target='_blank'
+                rel='noopener noreferrer'
                 className="hover:scale-y-110 ease-in-out duration-700">
               <AiFillGithub size={'2rem'} />
             </Link>

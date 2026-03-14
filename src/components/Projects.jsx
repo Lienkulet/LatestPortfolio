@@ -104,8 +104,8 @@ const Projects = () => {
     <section id='projects' className='bg-white py-20'>
       <div className='container'>
         <header ref={headerRef} className='flex flex-col mb-10 gap-2 md:text-start text-center'>
-          <h1 className='text-[#147efb] font-bold text-xl opacity-0'>Projects</h1>
-          <h1 className='font-bold text-xl opacity-0'>Each project is a unique 🧩 of development</h1>
+          <h2 className='text-[#147efb] font-bold text-xl opacity-0'>Projects</h2>
+          <h3 className='font-bold text-xl opacity-0'>Each project is a unique 🧩 of development</h3>
         </header>
         <main className='flex flex-col items-center gap-6'>
           {projects.map((project, index) => (

@@ -46,7 +46,7 @@ const Project = ({
     }, [nr])
 
   return (
-    <article ref={cardRef} className='shadow w-full p-4 rounded-xl border opacity-0'>
+    <article ref={cardRef} className='shadow w-full p-4 rounded-xl border opacity-0 hover:shadow-xl transition-shadow duration-300'>
         <figure className={`flex flex-col md:flex-row ${nr%2 === 0 ? '' : 'md:flex-row-reverse'} gap-6 justify-between`}>
             <Image
                 ref={imageRef}
@@ -58,27 +58,26 @@ const Project = ({
             />
             <figcaption ref={captionRef} className='flex flex-col items-center max-w-md mx-auto'>
                 <header className='mt-4'>
-                    <h1 className='font-bold text-xl text-[#2d2e32]'>{title}</h1>
+                    <h3 className='font-bold text-xl text-[#2d2e32]'>{title}</h3>
                 </header>
-                <main className='flex flex-col items-center gap-2 my-auto '>
-                    <p className='text-center '>{description}</p>
+                <main className='flex flex-col items-center gap-2 my-auto'>
+                    <p className='text-center'>{description}</p>
                     <div className='flex flex-wrap gap-2 items-center justify-center mt-2'>
-                        {technologies.length > 0 && technologies.map((technology, index) => (
-                            <h1 key={index} className='p-2 bg-white shadow font-semibold text-md'>{technology}</h1>
+                        {technologies.map((technology, index) => (
+                            <span key={index} className='p-2 bg-white shadow font-semibold text-md'>{technology}</span>
                         ))}
                     </div>
                 </main>
                 <footer className='flex flex-row items-baseline relative bottom-0 mt-4 md:mt-auto mb-2 gap-10 font-medium'>
-                   {github != ''? <Link href={github} target='_blank'
-                         className="flex flex-row items-center gap-2 hover:scale-y-110 hover:text-[#147efb]
-                            ease-in-out duration-500">
+                   {github !== '' && (
+                    <Link href={github} target='_blank' rel='noopener noreferrer'
+                         className="flex flex-row items-center gap-2 hover:scale-y-110 hover:text-[#147efb] ease-in-out duration-500">
                             Code
                             <AiFillGithub size={'1.5rem'}/>
-                    </Link> : ''}
-
-                    <Link href={liveDemo} target='_blank'
-                         className="flex flex-row items-center gap-2 hover:scale-y-110 hover:text-[#147efb]
-                            ease-in-out duration-500">
+                    </Link>
+                   )}
+                    <Link href={liveDemo} target='_blank' rel='noopener noreferrer'
+                         className="flex flex-row items-center gap-2 hover:scale-y-110 hover:text-[#147efb] ease-in-out duration-500">
                             LiveDemo
                             <AiOutlineLink size={'1.5rem'}/>
                     </Link>
