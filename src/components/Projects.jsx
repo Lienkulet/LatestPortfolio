@@ -1,28 +1,33 @@
 'use client'
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 import Project from './Project'
-import Aos from 'aos';
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
+gsap.registerPlugin(ScrollTrigger)
 
 const Projects = () => {
-  // image, title, github, liveDemo, description, technologies 
+  const headerRef = useRef(null)
 
   useEffect(() => {
-    Aos.init({duration:1200});
-});
+    const ctx = gsap.context(() => {
+      const children = headerRef.current?.children
+      if (children) {
+        gsap.fromTo(children,
+          { y: 30, opacity: 0 },
+          {
+            y: 0, opacity: 1, duration: 0.9, ease: 'power3.out', stagger: 0.15,
+            scrollTrigger: { trigger: headerRef.current, start: 'top 90%', toggleActions: 'play none none none' }
+          }
+        )
+      }
+    })
+    return () => ctx.revert()
+  }, [])
 
   const projects = [
     {
-      title: 'Kedco Electronics💻',
-      delay:250,
-      image: '/Kedco-Electronics.webp',
-      github: 'https://github.com/Lienkulet/KEDCO-Electronics',
-      liveDemo: 'https://kedco-electronics.vercel.app/',
-      description: 'A website that offers a wide range of electronic products with a detailed description for purchase such as smartphones, laptops, headphones, and more. The website offers various payment options and shipping methods.',
-      technologies: ['React', 'NextJs', 'Sanity']
-    },
-    {
       title: 'Premier Imobil🏡',
-      delay:300,
       image: '/PremierImobil.png',
       github: '',
       liveDemo: 'https://premierimobil.md/ro',
@@ -30,17 +35,23 @@ const Projects = () => {
       technologies: ['React', 'NextJs', 'Tailwind Css', 'MongoDb']
     },
     {
-      title: 'Comoara Stupului🍯',
-      delay:300,
-      image: '/ComoaraStupului.png',
-      github: 'https://github.com/Lienkulet/ComoaraStupului',
-      liveDemo: 'https://comoarastupului.com/',
-      description: `Streamlined e-commerce platform inviting you to indulge in the purity of honey, anytime, anywhere. Website created for the Tekwill 2024 competition and exhibition and included in their book`,
-      technologies: ['Html', 'Css', 'Javascript']
+      title: 'VetMaxiTeh💊',
+      image: '/VetMaxiTeh.png',
+      github: '',
+      liveDemo: 'https://vetmaxiteh.com/',
+      description: `Modern veterinary products platform dedicated to supporting animal health and wellbeing.`,
+      technologies: ['React', 'NextJs', 'NextAuth', 'MongoDb', 'Tailwind Css']
+    },
+    {
+      title: 'CebanBarber💈',
+      image: '/CebanBarber.png',
+      github: '',
+      liveDemo: 'https://ceban-barber.vercel.app/',
+      description: `Website for a local barber shop, offering expert grooming services to help you look and feel your best.`,
+      technologies: ['React', 'NextJs', 'Tailwind Css']
     },
     {
       title: 'SDGroup🧱',
-      delay:300,
       image: '/SDGroup.png',
       github: '',
       liveDemo: 'https://sdgroup.md/',
@@ -48,8 +59,23 @@ const Projects = () => {
       technologies: ['Html', 'Css', 'Javascript']
     },
     {
+      title: 'Comoara Stupului🍯',
+      image: '/ComoaraStupului.png',
+      github: '',
+      liveDemo: 'https://comoarastupului.com/',
+      description: `Website for a local honey brand showcasing natural bee products and offering raw, minimally processed honey and other hive-based goods.`,
+      technologies: ['React', 'NextJs', 'MongoDb']
+    },
+    {
+      title: 'Kedco Electronics💻',
+      image: '/Kedco-Electronics.webp',
+      github: 'https://github.com/Lienkulet/KEDCO-Electronics',
+      liveDemo: 'https://kedco-electronics.vercel.app/',
+      description: 'A website that offers a wide range of electronic products with a detailed description for purchase such as smartphones, laptops, headphones, and more. The website offers various payment options and shipping methods.',
+      technologies: ['React', 'NextJs', 'Sanity']
+    },
+    {
       title: 'Liedko📱',
-      delay:300,
       image: '/Liedko.webp',
       github: 'https://github.com/Lienkulet/Liedko',
       liveDemo: 'https://liedko.vercel.app/',
@@ -58,7 +84,6 @@ const Projects = () => {
     },
     {
       title: 'Grilli Bites🍝',
-      delay:300,
       image: '/Grilli2.png',
       github: 'https://github.com/Lienkulet/Grilli',
       liveDemo: 'https://grillweb.netlify.app/',
@@ -67,28 +92,25 @@ const Projects = () => {
     },
     {
       title: 'SummAize📝',
-      delay:300,
       image: '/SummAize.jpeg',
       github: 'https://github.com/Lienkulet/SummAIze',
       liveDemo: 'https://summaizegpt.netlify.app/',
       description: 'Article summarizer, offering fast and accurate summaries of newspages and much more! Save time and get to the key points with ease, all in just a few clicks.',
       technologies: ['NextJS', 'Tailwind CSS']
     },
-   
   ]
+
   return (
     <section id='projects' className='bg-white py-20'>
       <div className='container'>
-        <header className='flex flex-col mb-10 gap-2 md:text-start text-center'>
-          <h1 className='text-[#147efb] font-bold text-xl' data-aos='fade-right'>Projects</h1>
-          <h1 className='font-bold text-xl' data-aos='fade-right' data-aos-delay={150}>Each project is a unique 🧩 of development</h1>
+        <header ref={headerRef} className='flex flex-col mb-10 gap-2 md:text-start text-center'>
+          <h1 className='text-[#147efb] font-bold text-xl opacity-0'>Projects</h1>
+          <h1 className='font-bold text-xl opacity-0'>Each project is a unique 🧩 of development</h1>
         </header>
         <main className='flex flex-col items-center gap-6'>
-          {
-            projects.length > 0 && projects.map((project, index) => (
-              <Project key={index} project={project} nr={index} />
-            ))
-          }
+          {projects.map((project, index) => (
+            <Project key={index} project={project} nr={index} />
+          ))}
         </main>
       </div>
     </section>
