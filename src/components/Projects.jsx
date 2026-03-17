@@ -66,13 +66,21 @@ const Projects = () => {
       description: 'Article summarizer, offering fast and accurate summaries of newspages and much more! Save time and get to the key points with ease, all in just a few clicks.',
       technologies: ['NextJS', 'Tailwind CSS']
     },
-     {
-      title: 'Premier Imobil🏡',
-      image: '/PremierImobil.png',
+    //  {
+    //   title: 'Premier Imobil🏡',
+    //   image: '/PremierImobil.png',
+    //   github: '',
+    //   liveDemo: 'https://premierimobil.md/ro',
+    //   description: 'Website for a local real estate agency, offering expert services in buying, selling, and renting properties.',
+    //   technologies: ['React', 'NextJs', 'Tailwind Css', 'MongoDb']
+    // },
+    {
+      title: 'CebanBarber💈',
+      image: '/CebanBarber.png',
       github: '',
-      liveDemo: 'https://premierimobil.md/ro',
-      description: 'Website for a local real estate agency, offering expert services in buying, selling, and renting properties.',
-      technologies: ['React', 'NextJs', 'Tailwind Css', 'MongoDb']
+      liveDemo: 'https://www.cebanbarber.com/',
+      description: `Website for a local barber shop, offering expert grooming services to help you look and feel your best.`,
+      technologies: ['React', 'NextJs', 'Tailwind Css']
     },
     {
       title: 'VetMaxiTeh💊',
@@ -83,22 +91,6 @@ const Projects = () => {
       technologies: ['React', 'NextJs', 'NextAuth', 'MongoDb', 'Tailwind Css']
     },
     {
-      title: 'CebanBarber💈',
-      image: '/CebanBarber.png',
-      github: '',
-      liveDemo: 'https://www.cebanbarber.com/',
-      description: `Website for a local barber shop, offering expert grooming services to help you look and feel your best.`,
-      technologies: ['React', 'NextJs', 'Tailwind Css']
-    },
-    {
-      title: 'SDGroup🧱',
-      image: '/SDGroup.png',
-      github: '',
-      liveDemo: 'https://sdgroup.md/',
-      description: `Website for a local company specialized in apartment and office repairs, top-notch services to meet unique needs. From minor fixes to major renovations.`,
-      technologies: ['Html', 'Css', 'Javascript']
-    },
-    {
       title: 'Comoara Stupului🍯',
       image: '/ComoaraStupului.png',
       github: '',
@@ -107,6 +99,15 @@ const Projects = () => {
       description: `Website for a local honey brand showcasing natural bee products and offering raw, minimally processed honey and other hive-based goods.`,
       technologies: ['React', 'NextJs', 'MongoDb']
     },
+    // {
+    //   title: 'SDGroup🧱',
+    //   image: '/SDGroup.png',
+    //   github: '',
+    //   liveDemo: 'https://sdgroup.md/',
+    //   description: `Website for a local company specialized in apartment and office repairs, top-notch services to meet unique needs. From minor fixes to major renovations.`,
+    //   technologies: ['Html', 'Css', 'Javascript']
+    // },
+
   ]
 
   return (
