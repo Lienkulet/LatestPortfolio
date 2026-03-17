@@ -26,6 +26,14 @@ const Projects = () => {
   }, [])
 
   const projects = [
+    //  {
+    //   title: 'Moldinconbank🏦',
+    //   image: '/PremierImobil.png',
+    //   github: '',
+    //   liveDemo: 'https://premierimobil.md/ro',
+    //   description: 'Built dynamic pages for personal loan and mortgage services for Moldinconbank, a major commercial bank in Moldova, using modern web technologies.',
+    //   technologies: ['React', 'NextJs']
+    // },
     {
       title: 'Premier Imobil🏡',
       image: '/PremierImobil.png',
@@ -46,7 +54,7 @@ const Projects = () => {
       title: 'CebanBarber💈',
       image: '/CebanBarber.png',
       github: '',
-      liveDemo: 'https://ceban-barber.vercel.app/',
+      liveDemo: 'https://www.cebanbarber.com/',
       description: `Website for a local barber shop, offering expert grooming services to help you look and feel your best.`,
       technologies: ['React', 'NextJs', 'Tailwind Css']
     },
