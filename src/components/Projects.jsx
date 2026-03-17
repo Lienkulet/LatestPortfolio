@@ -87,7 +87,7 @@ const Projects = () => {
       image: '/VetMaxiTeh.png',
       github: '',
       liveDemo: 'https://vetmaxiteh.com/',
-      description: `Modern veterinary products platform dedicated to supporting animal health and wellbeing.`,
+      description: `Website for a local veterinary products platform dedicated to supporting animal health and wellbeing.`,
       technologies: ['React', 'NextJs', 'NextAuth', 'MongoDb', 'Tailwind Css']
     },
     {
