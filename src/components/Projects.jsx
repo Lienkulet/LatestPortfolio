@@ -35,6 +35,38 @@ const Projects = () => {
     //   technologies: ['React', 'NextJs']
     // },
     {
+      title: 'Kedco Electronics💻',
+      image: '/Kedco-Electronics.webp',
+      github: 'https://github.com/Lienkulet/KEDCO-Electronics',
+      liveDemo: 'https://kedco-electronics.vercel.app/',
+      description: 'A website that offers a wide range of electronic products with a detailed description for purchase such as smartphones, laptops, headphones, and more. The website offers various payment options and shipping methods.',
+      technologies: ['React', 'NextJs', 'Sanity']
+    },
+    {
+      title: 'Liedko📱',
+      image: '/Liedko.webp',
+      github: 'https://github.com/Lienkulet/Liedko',
+      liveDemo: 'https://liedko.vercel.app/',
+      description: 'Experience hassle-free electronic device shopping. Discover a wide range of products, utilize search and filtering options, read reviews, and enjoy a seamless checkout process. Manage orders, create a wishlist, and take advantage of coupons for added savings.',
+      technologies: ['React', 'NextJs', 'Styled Components', 'MongoDb']
+    },
+    {
+      title: 'Grilli Bites🍝',
+      image: '/Grilli2.png',
+      github: 'https://github.com/Lienkulet/Grilli',
+      liveDemo: 'https://grillweb.netlify.app/',
+      description: 'Restaurant landing page, serving delicious, freshly prepared meals in a cozy atmosphere. Enjoy a unique dining experience with dishes crafted to satisfy every taste.',
+      technologies: ['React', 'NextJs', 'Tailwind Css']
+    },
+    {
+      title: 'SummAize📝',
+      image: '/SummAize.jpeg',
+      github: 'https://github.com/Lienkulet/SummAIze',
+      liveDemo: 'https://summaizegpt.netlify.app/',
+      description: 'Article summarizer, offering fast and accurate summaries of newspages and much more! Save time and get to the key points with ease, all in just a few clicks.',
+      technologies: ['NextJS', 'Tailwind CSS']
+    },
+     {
       title: 'Premier Imobil🏡',
       image: '/PremierImobil.png',
       github: '',
@@ -74,38 +106,6 @@ const Projects = () => {
       // liveDemo: 'https://comoarastupului.com/',
       description: `Website for a local honey brand showcasing natural bee products and offering raw, minimally processed honey and other hive-based goods.`,
       technologies: ['React', 'NextJs', 'MongoDb']
-    },
-    {
-      title: 'Kedco Electronics💻',
-      image: '/Kedco-Electronics.webp',
-      github: 'https://github.com/Lienkulet/KEDCO-Electronics',
-      liveDemo: 'https://kedco-electronics.vercel.app/',
-      description: 'A website that offers a wide range of electronic products with a detailed description for purchase such as smartphones, laptops, headphones, and more. The website offers various payment options and shipping methods.',
-      technologies: ['React', 'NextJs', 'Sanity']
-    },
-    {
-      title: 'Liedko📱',
-      image: '/Liedko.webp',
-      github: 'https://github.com/Lienkulet/Liedko',
-      liveDemo: 'https://liedko.vercel.app/',
-      description: 'Experience hassle-free electronic device shopping. Discover a wide range of products, utilize search and filtering options, read reviews, and enjoy a seamless checkout process. Manage orders, create a wishlist, and take advantage of coupons for added savings.',
-      technologies: ['React', 'NextJs', 'Styled Components', 'MongoDb']
-    },
-    {
-      title: 'Grilli Bites🍝',
-      image: '/Grilli2.png',
-      github: 'https://github.com/Lienkulet/Grilli',
-      liveDemo: 'https://grillweb.netlify.app/',
-      description: 'Restaurant landing page, serving delicious, freshly prepared meals in a cozy atmosphere. Enjoy a unique dining experience with dishes crafted to satisfy every taste.',
-      technologies: ['React', 'NextJs', 'Tailwind Css']
-    },
-    {
-      title: 'SummAize📝',
-      image: '/SummAize.jpeg',
-      github: 'https://github.com/Lienkulet/SummAIze',
-      liveDemo: 'https://summaizegpt.netlify.app/',
-      description: 'Article summarizer, offering fast and accurate summaries of newspages and much more! Save time and get to the key points with ease, all in just a few clicks.',
-      technologies: ['NextJS', 'Tailwind CSS']
     },
   ]
 
