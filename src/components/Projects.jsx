@@ -70,7 +70,8 @@ const Projects = () => {
       title: 'Comoara Stupului🍯',
       image: '/ComoaraStupului.png',
       github: '',
-      liveDemo: 'https://comoarastupului.com/',
+      liveDemo: 'https://comoarastupului.netlify.app/',
+      // liveDemo: 'https://comoarastupului.com/',
       description: `Website for a local honey brand showcasing natural bee products and offering raw, minimally processed honey and other hive-based goods.`,
       technologies: ['React', 'NextJs', 'MongoDb']
     },
