@@ -35,28 +35,29 @@ const Projects = () => {
     //   technologies: ['React', 'NextJs']
     // },
     {
-      title: 'Kedco Electronics💻',
-      image: '/Kedco-Electronics.webp',
-      github: 'https://github.com/Lienkulet/KEDCO-Electronics',
-      liveDemo: 'https://kedco-electronics.vercel.app/',
-      description: 'A website that offers a wide range of electronic products with a detailed description for purchase such as smartphones, laptops, headphones, and more. The website offers various payment options and shipping methods.',
-      technologies: ['React', 'NextJs', 'Sanity']
-    },
-    {
-      title: 'Liedko📱',
-      image: '/Liedko.webp',
-      github: 'https://github.com/Lienkulet/Liedko',
-      liveDemo: 'https://liedko.vercel.app/',
-      description: 'Experience hassle-free electronic device shopping. Discover a wide range of products, utilize search and filtering options, read reviews, and enjoy a seamless checkout process. Manage orders, create a wishlist, and take advantage of coupons for added savings.',
-      technologies: ['React', 'NextJs', 'Styled Components', 'MongoDb']
-    },
-    {
-      title: 'Grilli Bites🍝',
-      image: '/Grilli2.png',
-      github: 'https://github.com/Lienkulet/Grilli',
-      liveDemo: 'https://grillweb.netlify.app/',
-      description: 'Restaurant landing page, serving delicious, freshly prepared meals in a cozy atmosphere. Enjoy a unique dining experience with dishes crafted to satisfy every taste.',
+      title: 'Playgram AI',
+      image: '/playgram.png',
+      github: '',
+      liveDemo: 'https://playgram.ai/',
+      description: `Landing SaaS for an AI-powered team collaboration platform, providing access to multiple language models in one workspace with shared memory to streamline workflows and enhance productivity.`,
       technologies: ['React', 'NextJs', 'Tailwind Css']
+    },
+    {
+      title: 'INC COFFEE ROASTERS',
+      image: '/inccoffeeroasters.png',
+      github: '',
+      liveDemo: 'https://www.inccoffeeroasters.com/',
+      description: `Website for a mission-driven coffee roastery and café, offering freshly roasted specialty coffee while promoting inclusivity through meaningful employment opportunities for individuals of all abilities.`,
+      technologies: ['React', 'NextJs']
+    },
+    {
+      title: 'Comoara Stupului🍯',
+      image: '/ComoaraStupului.png',
+      github: '',
+      liveDemo: 'https://comoarastupului.netlify.app/',
+      // liveDemo: 'https://comoarastupului.com/',
+      description: `Website for a local honey brand showcasing natural bee products and offering raw, minimally processed honey and other hive-based goods.`,
+      technologies: ['React', 'NextJs', 'MongoDb']
     },
     {
       title: 'SummAize📝',
@@ -66,17 +67,9 @@ const Projects = () => {
       description: 'Article summarizer, offering fast and accurate summaries of newspages and much more! Save time and get to the key points with ease, all in just a few clicks.',
       technologies: ['NextJS', 'Tailwind CSS']
     },
-    //  {
-    //   title: 'Premier Imobil🏡',
-    //   image: '/PremierImobil.png',
-    //   github: '',
-    //   liveDemo: 'https://premierimobil.md/ro',
-    //   description: 'Website for a local real estate agency, offering expert services in buying, selling, and renting properties.',
-    //   technologies: ['React', 'NextJs', 'Tailwind Css', 'MongoDb']
-    // },
     {
       title: 'CebanBarber💈',
-      image: '/CebanBarber.png',
+      image: '/cebanbarber.png',
       github: '',
       liveDemo: 'https://www.cebanbarber.com/',
       description: `Website for a local barber shop, offering expert grooming services to help you look and feel your best.`,
@@ -91,14 +84,38 @@ const Projects = () => {
       technologies: ['React', 'NextJs', 'NextAuth', 'MongoDb', 'Tailwind Css']
     },
     {
-      title: 'Comoara Stupului🍯',
-      image: '/ComoaraStupului.png',
-      github: '',
-      liveDemo: 'https://comoarastupului.netlify.app/',
-      // liveDemo: 'https://comoarastupului.com/',
-      description: `Website for a local honey brand showcasing natural bee products and offering raw, minimally processed honey and other hive-based goods.`,
-      technologies: ['React', 'NextJs', 'MongoDb']
+      title: 'Kedco Electronics💻',
+      image: '/Kedco-Electronics.webp',
+      github: 'https://github.com/Lienkulet/KEDCO-Electronics',
+      liveDemo: 'https://kedco-electronics.vercel.app/',
+      description: `Ecommerce website for electronic products, featuring a wide range of items like smartphones, laptops, and accessories with detailed descriptions, flexible payment options, and multiple shipping methods.`,
+      technologies: ['React', 'NextJs', 'Sanity']
     },
+    {
+      title: 'Liedko📱',
+      image: '/Liedko.webp',
+      github: 'https://github.com/Lienkulet/Liedko',
+      liveDemo: 'https://liedko.vercel.app/',
+      description: `Ecommerce platform for electronic devices, offering a wide product selection with advanced search and filtering, customer reviews, wishlist management, secure checkout, and exclusive discounts through coupons.`,
+      technologies: ['React', 'NextJs', 'Styled Components', 'MongoDb']
+    },
+    {
+      title: 'Grilli Bites🍝',
+      image: '/Grilli2.png',
+      github: 'https://github.com/Lienkulet/Grilli',
+      liveDemo: 'https://grillweb.netlify.app/',
+      description: 'Restaurant landing page, serving delicious, freshly prepared meals in a cozy atmosphere. Enjoy a unique dining experience with dishes crafted to satisfy every taste.',
+      technologies: ['React', 'NextJs', 'Tailwind Css']
+    },
+
+    //  {
+    //   title: 'Premier Imobil🏡',
+    //   image: '/PremierImobil.png',
+    //   github: '',
+    //   liveDemo: 'https://premierimobil.md/ro',
+    //   description: 'Website for a local real estate agency, offering expert services in buying, selling, and renting properties.',
+    //   technologies: ['React', 'NextJs', 'Tailwind Css', 'MongoDb']
+    // },
     // {
     //   title: 'SDGroup🧱',
     //   image: '/SDGroup.png',
